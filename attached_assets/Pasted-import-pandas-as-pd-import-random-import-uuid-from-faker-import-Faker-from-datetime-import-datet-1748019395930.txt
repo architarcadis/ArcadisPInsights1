@@ -1,0 +1,407 @@
+import pandas as pd
+import random
+import uuid
+from faker import Faker
+from datetime import datetime, timedelta
+import os
+
+# --- Configuration for Thames Water ---
+CURRENCY = "GBP"
+COUNTRY = "United Kingdom"
+
+# Thames Water relevant data points
+tw_supplier_categories = [
+    "Civil Engineering & Construction", "Mechanical & Electrical Engineering", "Chemicals Supply",
+    "IT & Technology Solutions", "Environmental Consultancy", "Engineering Design Services",
+    "Fleet Management & Logistics", "Laboratory Services", "Professional Services (Legal/HR)",
+    "Facilities Management", "Waste Management & Sludge Treatment", "Leakage Detection Services",
+    "Customer Service Solutions", "Metering Technology & Services", "Pipeline & Network Maintenance",
+    "Heavy Plant & Equipment Hire", "Water Treatment Plant Operations", "Health & Safety Consultancy",
+    "Renewable Energy Solutions", "Research & Development"
+]
+
+tw_contract_types = ["Service Agreement", "Product Supply", "Framework Agreement", "Consultancy Services", "Maintenance Contract", "Construction Works"]
+# Added "Terminated" to the list of statuses as it's used in revised logic.
+tw_contract_status = ["Active", "Expired", "Pending Renewal", "Terminated", "Upcoming"]
+
+
+tw_spend_categories = {
+    "Infrastructure & Assets": ["Pipeline Renewal", "Treatment Plant Upgrades", "New Connections", "Pumping Station Maintenance", "Reservoir Construction"],
+    "Operational Consumables": ["Water Treatment Chemicals", "Lab Reagents", "Safety Equipment", "Pipe Fittings", "Office Supplies"],
+    "Technology & IT": ["SCADA Systems", "Billing Software Licenses", "Cybersecurity Services", "Cloud Hosting", "Data Analytics Platforms"],
+    "Professional & Consultancy Services": ["Environmental Impact Assessment", "Engineering Design", "Legal Counsel", "Financial Audit", "Leakage Consultancy"],
+    "Fleet & Logistics": ["Vehicle Maintenance", "Fuel Costs", "Logistics & Haulage", "Equipment Rental"],
+    "Maintenance & Repair": ["Emergency Repairs", "Scheduled Maintenance Works", "Equipment Servicing"],
+    "Utilities & Energy": ["Electricity", "Gas", "Renewable Energy Generation"],
+    "Business Services": ["Customer Call Centre Services", "HR & Payroll Services", "Training & Development", "Marketing & Communications"]
+}
+all_spend_categories = list(tw_spend_categories.keys())
+
+tw_business_units = [
+    "Water Production & Treatment", "Wastewater Collection & Treatment", "Network Operations & Maintenance",
+    "Capital Delivery Programmes", "Asset Management Strategy", "Customer Operations & Retail",
+    "IT & Digital Transformation", "Health, Safety & Environment", "Finance & Regulation",
+    "Procurement & Supply Chain", "Strategic Resource Planning", "Human Resources"
+]
+
+uk_cities = ["London", "Reading", "Swindon", "Oxford", "Guildford", "Slough", "Luton", "Aylesbury", "Chelmsford", "Maidstone", "Basingstoke", "Winchester", "Birmingham", "Manchester", "Leeds"]
+payment_terms_list = ["Net 30", "Net 45", "Net 60", "Net 90"]
+
+# Initialize Faker for UK data
+fake = Faker('en_GB')
+
+# --- Helper Functions ---
+def generate_supplier_id(n):
+    return f"TW_SUP_{str(n).zfill(4)}"
+
+def generate_contract_id(n):
+    return f"TW_CON_{str(n).zfill(4)}"
+
+def generate_invoice_id():
+    return f"TW_INV_{str(uuid.uuid4().hex)[:8].upper()}"
+
+def generate_po_id():
+    return f"TW_PO_{str(uuid.uuid4().hex)[:8].upper()}"
+
+def generate_realistic_phone():
+    return f"+44 {random.randint(1000, 7999)} {random.randint(100000, 999999)}"
+
+def generate_company_name(category_hint):
+    prefixes = ["Aqua", "Hydro", "Enviro", "Pipe", "Clear", "Flow", "Thames", "Kennet", "Severn", "UK", "London", "Southern"]
+    suffixes = ["Solutions", "Dynamics", "Services", "Ltd", "PLC", "Group", "Engineering", "Consultants", "Systems", "Water", "Utilities", "Tech"]
+    mid_terms = ["Tech", "Serv", "Pro", "Infra", "Chem", "Logistics", "Asset", "Civil", "Data"]
+    company_name_base = fake.company().split(' ')[0].replace(',', '')
+
+    if any(term in category_hint for term in ["Engineering", "Construction", "Maintenance"]):
+        name_parts = [random.choice(prefixes), company_name_base, random.choice(suffixes)]
+    elif "Chemicals" in category_hint:
+        name_parts = [random.choice(["Chem", "Aqua"]), company_name_base + " Chemicals", random.choice(["Ltd", "Solutions"])]
+    elif any(term in category_hint for term in ["IT", "Technology", "Solutions"]):
+        name_parts = [random.choice(["Digital", "Tech", "Cyber", "Data"]), company_name_base, random.choice(["Systems", "Solutions", "Ltd"])]
+    elif "Consultancy" in category_hint:
+         name_parts = [company_name_base + " & " + fake.last_name() if random.random() > 0.5 else random.choice(prefixes) + " Insight", random.choice(["Consulting", "Partners", "Advisory"])]
+    else:
+        name_parts = [random.choice(prefixes), company_name_base, random.choice(suffixes)]
+    return " ".join(name_parts)
+
+
+# --- 1. Supplier Master Data (1000 rows) ---
+print("Generating Supplier Master Data...")
+supplier_master_data = []
+supplier_id_to_name_map = {}
+supplier_id_to_category_map = {}
+supplier_id_to_payment_terms_map = {}
+supplier_name_to_id_map = {}
+generated_supplier_names = set()
+
+for i in range(1, 1001):
+    supplier_id = generate_supplier_id(i)
+    category = random.choice(tw_supplier_categories)
+    supplier_name = generate_company_name(category)
+    unique_suffix = 1
+    original_supplier_name = supplier_name
+    while supplier_name in generated_supplier_names:
+        supplier_name = f"{original_supplier_name} {unique_suffix}"
+        unique_suffix += 1
+    generated_supplier_names.add(supplier_name)
+
+    contact_first_name = fake.first_name()
+    contact_last_name = fake.last_name()
+    contact_name = f"{contact_first_name} {contact_last_name}"
+    domain_part = supplier_name.split(' ')[0].lower().replace('&','and').replace('.','').replace(',','').replace('-', '')
+    if not domain_part: domain_part = "supply"
+    contact_email = f"{contact_first_name.lower()}.{contact_last_name.lower()}@{domain_part}.co.uk"
+    relationship_start_date = fake.date_between(start_date="-8y", end_date="-1y")
+    annual_revenue = random.randint(50000, 50000000) if "PLC" not in supplier_name else random.randint(50000000, 500000000)
+    payment_terms = random.choice(payment_terms_list)
+
+    supplier_master_data.append({
+        "SupplierID": supplier_id,
+        "SupplierName": supplier_name,
+        "Category": category,
+        "Country": COUNTRY,
+        "City": random.choice(uk_cities),
+        "ContactName": contact_name,
+        "ContactEmail": contact_email,
+        "ContactPhone": generate_realistic_phone(),
+        "AnnualRevenue": annual_revenue,
+        "PaymentTerms": payment_terms,
+        "Active": random.choices([True, False], weights=[0.92, 0.08])[0],
+        "RelationshipStartDate": relationship_start_date.strftime('%Y-%m-%d')
+    })
+    supplier_id_to_name_map[supplier_id] = supplier_name
+    supplier_id_to_category_map[supplier_id] = category
+    supplier_id_to_payment_terms_map[supplier_id] = payment_terms
+    supplier_name_to_id_map[supplier_name] = supplier_id
+supplier_master_df = pd.DataFrame(supplier_master_data)
+
+# --- 2. Contract Data (1000 rows) --- REVISED DATE LOGIC
+print("Generating Contract Data...")
+contract_data = []
+supplier_ids_list = supplier_master_df["SupplierID"].tolist()
+current_date = datetime.now().date() # Define current_date
+
+for i in range(1, 1001):
+    contract_id = generate_contract_id(i)
+    supplier_id = random.choice(supplier_ids_list)
+    supplier_name = supplier_id_to_name_map[supplier_id]
+    supplier_category = supplier_id_to_category_map[supplier_id]
+    relationship_start_date_obj = datetime.strptime(supplier_master_df[supplier_master_df['SupplierID'] == supplier_id]['RelationshipStartDate'].iloc[0], '%Y-%m-%d').date()
+
+    status = random.choice(tw_contract_status)
+    start_date_val = current_date # Default placeholder
+    end_date_val = current_date   # Default placeholder
+
+    min_contract_start_allowed = relationship_start_date_obj + timedelta(days=1) # Contract must start after relationship
+
+    if status == "Active":
+        # Starts in past (but after relationship start), ends in future
+        # Ensure start_date_lower_bound is not after start_date_upper_bound
+        start_date_lower_bound = max(min_contract_start_allowed, current_date - timedelta(days=365*2))
+        start_date_upper_bound = current_date - timedelta(days=30)
+        if start_date_lower_bound > start_date_upper_bound: start_date_lower_bound = start_date_upper_bound # Adjust if bounds crossed
+
+        start_date_val = fake.date_between_dates(date_start=start_date_lower_bound, date_end=start_date_upper_bound)
+
+        # Ensure end_date_lower_bound is not after end_date_upper_bound
+        end_date_lower_bound = current_date + timedelta(days=30)
+        end_date_upper_bound = current_date + timedelta(days=365*3)
+        if end_date_lower_bound > end_date_upper_bound : end_date_lower_bound = end_date_upper_bound # Should not happen here
+
+        end_date_val = fake.date_between_dates(date_start=end_date_lower_bound, date_end=end_date_upper_bound)
+
+    elif status == "Expired":
+        # Starts in past, ends in past (but after start_date and relationship_start)
+        # Ensure start_date_lower_bound is not after start_date_upper_bound
+        start_date_lower_bound = max(min_contract_start_allowed, current_date - timedelta(days=365*5))
+        start_date_upper_bound = current_date - timedelta(days=60) # Must start early enough to have ended
+        if start_date_lower_bound > start_date_upper_bound: start_date_lower_bound = start_date_upper_bound
+
+        start_date_val = fake.date_between_dates(date_start=start_date_lower_bound, date_end=start_date_upper_bound)
+
+        # Ensure end_date_lower_bound is not after end_date_upper_bound
+        end_date_lower_bound = start_date_val + timedelta(days=30) # Must end after it starts
+        end_date_upper_bound = current_date - timedelta(days=1)
+        if end_date_lower_bound > end_date_upper_bound: # If start_date is too recent for a 30-day contract to end yesterday
+            end_date_val = end_date_lower_bound # Make it a short contract ending soon after start (still in past)
+            if end_date_val >= current_date: # If this still makes it not expired, adjust
+                 end_date_val = current_date - timedelta(days=1)
+                 if start_date_val >= end_date_val: # If start_date itself is yesterday or today
+                     start_date_val = current_date - timedelta(days=2) # Push start_date further back
+                     end_date_val = current_date - timedelta(days=1)
+        else:
+            end_date_val = fake.date_between_dates(date_start=end_date_lower_bound, date_end=end_date_upper_bound)
+
+
+    elif status == "Upcoming":
+        # Starts in future (after relationship start), ends in future
+        start_date_lower_bound = max(min_contract_start_allowed, current_date + timedelta(days=1))
+        start_date_upper_bound = current_date + timedelta(days=180)
+        if start_date_lower_bound > start_date_upper_bound: start_date_lower_bound = start_date_upper_bound
+
+        start_date_val = fake.date_between_dates(date_start=start_date_lower_bound, date_end=start_date_upper_bound)
+        end_date_val = start_date_val + timedelta(days=random.randint(180, 365*3))
+
+    elif status == "Pending Renewal":
+        # Starts in past, ends very soon (either past or future, around current_date)
+        start_date_lower_bound = max(min_contract_start_allowed, current_date - timedelta(days=365*3))
+        start_date_upper_bound = current_date - timedelta(days=90) # Start well in the past
+        if start_date_lower_bound > start_date_upper_bound: start_date_lower_bound = start_date_upper_bound
+
+        start_date_val = fake.date_between_dates(date_start=start_date_lower_bound, date_end=start_date_upper_bound)
+
+        end_date_lower_bound = max(start_date_val + timedelta(days=30), current_date - timedelta(days=60))
+        end_date_upper_bound = current_date + timedelta(days=60)
+        if end_date_lower_bound > end_date_upper_bound: end_date_lower_bound = end_date_upper_bound
+
+        end_date_val = fake.date_between_dates(date_start=end_date_lower_bound, date_end=end_date_upper_bound)
+
+    elif status == "Terminated":
+        # Starts in past (after relationship), ends in past (can be short)
+        start_date_lower_bound = max(min_contract_start_allowed, current_date - timedelta(days=365*4))
+        start_date_upper_bound = current_date - timedelta(days=30) # Start with enough time to have terminated
+        if start_date_lower_bound > start_date_upper_bound: start_date_lower_bound = start_date_upper_bound
+
+        start_date_val = fake.date_between_dates(date_start=start_date_lower_bound, date_end=start_date_upper_bound)
+
+        end_date_lower_bound = start_date_val + timedelta(days=1) # Can be very short
+        end_date_upper_bound = current_date - timedelta(days=1) # Must end before today
+        if end_date_lower_bound > end_date_upper_bound: # start_date is too recent (e.g. yesterday)
+            end_date_val = end_date_lower_bound # will be today, so adjust
+            if end_date_val >= current_date : end_date_val = start_date_val # make it end same day it started if all else fails
+        else:
+             end_date_val = fake.date_between_dates(date_start=end_date_lower_bound, date_end=end_date_upper_bound)
+
+
+    # Final sanity check: relationship_start <= start_date < end_date
+    if start_date_val < relationship_start_date_obj:
+        start_date_val = relationship_start_date_obj + timedelta(days=random.randint(1,10)) # Ensure it starts after relationship
+    if end_date_val <= start_date_val:
+        end_date_val = start_date_val + timedelta(days=random.randint(90, 365*2)) # Ensure end is significantly after start
+
+    # Contract value generation
+    contract_value_multiplier = random.randint(10000, 200000) # Base for smaller contracts
+    if supplier_category in ["Civil Engineering & Construction", "Mechanical & Electrical Engineering", "IT & Technology Solutions", "Water Treatment Plant Operations"]:
+        contract_value_multiplier = random.randint(100000, 2000000)
+    elif supplier_category in ["Chemicals Supply", "Pipeline & Network Maintenance", "Waste Management & Sludge Treatment"]:
+        contract_value_multiplier = random.randint(50000, 1000000)
+
+    contract_duration_years = max(0.25, (end_date_val - start_date_val).days / 365.25) # Min 3 months for value calc
+    value = int(contract_value_multiplier * contract_duration_years)
+    if value < 1000: value = random.randint(1000,5000) # Minimum contract value
+
+    contract_data.append({
+        "ContractID": contract_id,
+        "SupplierID": supplier_id,
+        "SupplierName": supplier_name,
+        "Category": supplier_category,
+        "ContractType": random.choice(tw_contract_types),
+        "StartDate": start_date_val.strftime('%Y-%m-%d'),
+        "EndDate": end_date_val.strftime('%Y-%m-%d'),
+        "Value": value,
+        "Currency": CURRENCY,
+        "Status": status,
+        "AutoRenewal": random.choices([True, False], weights=[0.3,0.7])[0],
+        "NoticePeriodDays": random.choice([30, 60, 90, 120, 180])
+    })
+contract_df = pd.DataFrame(contract_data)
+
+# --- 3. Supplier Performance Data (1000 rows) ---
+print("Generating Supplier Performance Data...")
+supplier_performance_data = []
+num_unique_suppliers_for_perf = min(350, len(supplier_ids_list))
+perf_supplier_ids_sample = random.sample(supplier_ids_list, num_unique_suppliers_for_perf)
+current_year = datetime.now().year
+quarters_list = []
+for year_offset in range(-3, 1):
+    year = current_year + year_offset
+    for q_num in range(1, 5):
+        if year == current_year and q_num > ((datetime.now().month -1)//3 + 1) and datetime.now().day < 15 :
+             break
+        if year < current_year -2 and q_num <3:
+            continue
+        quarters_list.append(f"{year}-Q{q_num}")
+if not quarters_list: quarters_list = ["2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2"]
+
+generated_reviews = 0
+supplier_review_counts = {sid: 0 for sid in perf_supplier_ids_sample}
+max_reviews_per_supplier = (1000 // num_unique_suppliers_for_perf) + 2
+
+while generated_reviews < 1000:
+    if not perf_supplier_ids_sample: break # Avoid error if list is empty
+    supplier_id_for_review = random.choice(perf_supplier_ids_sample)
+    relationship_start_date_str = supplier_master_df[supplier_master_df['SupplierID'] == supplier_id_for_review]['RelationshipStartDate'].iloc[0]
+    relationship_start_datetime = datetime.strptime(relationship_start_date_str, '%Y-%m-%d')
+    possible_quarters_for_supplier = [
+        q for q in quarters_list if
+        datetime(int(q.split('-Q')[0]), int(q.split('-Q')[1])*3 - 2, 1) > relationship_start_datetime
+    ]
+    if not possible_quarters_for_supplier:
+        # If this supplier has no valid quarters (e.g. too new), remove from sample for performance and continue
+        perf_supplier_ids_sample.remove(supplier_id_for_review)
+        supplier_review_counts.pop(supplier_id_for_review, None) # Remove from counts too
+        if not perf_supplier_ids_sample: break # Stop if no more suppliers eligible
+        continue
+
+    reviewed_quarters_for_this_supplier = {
+        entry['Quarter'] for entry in supplier_performance_data if entry['SupplierID'] == supplier_id_for_review
+    }
+    available_quarters_for_review = [q for q in possible_quarters_for_supplier if q not in reviewed_quarters_for_this_supplier]
+
+    if not available_quarters_for_review or supplier_review_counts.get(supplier_id_for_review, max_reviews_per_supplier + 1) >= max_reviews_per_supplier :
+        # Try removing from sample if exhausted, to give others a chance more often
+        if supplier_id_for_review in perf_supplier_ids_sample : perf_supplier_ids_sample.remove(supplier_id_for_review)
+        if not perf_supplier_ids_sample or all(supplier_review_counts.get(sid, max_reviews_per_supplier +1) >= max_reviews_per_supplier for sid in perf_supplier_ids_sample):
+             break # Avoid infinite loop if all suppliers hit max reviews or no more options
+        continue
+
+    quarter = random.choice(available_quarters_for_review)
+    delivery_score = round(random.uniform(6.0, 10.0), 1)
+    quality_score = round(random.uniform(6.0, 10.0), 1)
+    responsiveness_score = round(random.uniform(6.0, 10.0), 1)
+    overall_score = round( (delivery_score * 0.35 + quality_score * 0.45 + responsiveness_score * 0.2) + random.uniform(-0.2, 0.2) , 1)
+    overall_score = max(0.0, min(10.0, overall_score))
+
+    comments = ""
+    if overall_score >= 9.2: comments = random.choice(["Exceptional performance, consistently exceeds all expectations.", "Outstanding service and quality. A benchmark supplier.", "Top-tier, proactive, and delivers excellent results."])
+    elif overall_score >= 8.0: comments = random.choice(["Very good performance, meets or exceeds most KPIs.", "Reliable and high-quality delivery. Good responsiveness.", "Strong partnership, consistently delivers value."])
+    elif overall_score >= 7.0: comments = random.choice(["Satisfactory performance, meets contractual obligations.", "Generally good, with minor areas for improvement noted.", "Adequate service levels achieved."])
+    elif overall_score >= 6.0: comments = random.choice(["Performance requires attention in some areas.", "Met baseline requirements, but improvement desired.", "Acceptable, but some inconsistencies noted."])
+    else:
+        comments = random.choice(["Performance below expectations. Improvement plan required.", "Significant concerns regarding quality/delivery.", "Urgent review of service levels needed."])
+        if delivery_score < 6.5: comments += " Delivery targets frequently missed."
+        if quality_score < 6.5: comments += " Quality issues have been escalated."
+        if responsiveness_score < 6.5: comments += " Responsiveness needs significant improvement."
+
+    supplier_performance_data.append({
+        "SupplierID": supplier_id_for_review, "Quarter": quarter, "DeliveryScore": delivery_score,
+        "QualityScore": quality_score, "ResponsivenessScore": responsiveness_score, "OverallScore": overall_score, "Comments": comments.strip()
+    })
+    supplier_review_counts[supplier_id_for_review] = supplier_review_counts.get(supplier_id_for_review, 0) + 1
+    generated_reviews += 1
+supplier_performance_df = pd.DataFrame(supplier_performance_data)
+
+# --- 4. Spend Data (1000 rows) ---
+print("Generating Spend Data...")
+spend_data = []
+all_supplier_names_list = supplier_master_df["SupplierName"].tolist()
+for i in range(1, 1001):
+    supplier_name = random.choice(all_supplier_names_list)
+    supplier_id_for_spend = supplier_name_to_id_map[supplier_name]
+    master_category_for_supplier = supplier_id_to_category_map[supplier_id_for_spend]
+    payment_terms_for_supplier = supplier_id_to_payment_terms_map[supplier_id_for_spend]
+    spend_cat_key = random.choice(all_spend_categories)
+    if random.random() < 0.4:
+        if any(term in master_category_for_supplier.lower() for term in ["engineering", "construction", "pipeline", "plant", "maintenance", "asset"]): spend_cat_key = random.choice(["Infrastructure & Assets", "Maintenance & Repair", "Utilities & Energy"])
+        elif "chemic" in master_category_for_supplier.lower(): spend_cat_key = "Operational Consumables"
+        elif any(term in master_category_for_supplier.lower() for term in ["it", "tech", "software", "digital"]): spend_cat_key = "Technology & IT"
+        elif "consultancy" in master_category_for_supplier.lower() or "professional" in master_category_for_supplier.lower(): spend_cat_key = "Professional & Consultancy Services"
+        elif "fleet" in master_category_for_supplier.lower() or "logistic" in master_category_for_supplier.lower(): spend_cat_key = "Fleet & Logistics"
+    spend_sub_cat = random.choice(tw_spend_categories[spend_cat_key])
+    relationship_start_date_for_spend_supplier = datetime.strptime(supplier_master_df[supplier_master_df['SupplierID'] == supplier_id_for_spend]['RelationshipStartDate'].iloc[0], '%Y-%m-%d').date()
+    spend_date = fake.date_between(start_date=relationship_start_date_for_spend_supplier + timedelta(days=15), end_date="today")
+    if (datetime.now().date() - spend_date).days > 365*4 :
+        spend_date = fake.date_between(start_date="-3y", end_date="today")
+        if spend_date < relationship_start_date_for_spend_supplier: spend_date = relationship_start_date_for_spend_supplier + timedelta(days=15)
+    amount = 0
+    if spend_cat_key == "Infrastructure & Assets": amount = random.randint(10000, 750000)
+    elif spend_cat_key == "Technology & IT": amount = random.randint(500, 250000)
+    elif spend_cat_key == "Operational Consumables": amount = random.randint(50, 30000)
+    elif spend_cat_key == "Professional & Consultancy Services": amount = random.randint(1000, 150000)
+    else: amount = random.randint(200, 75000)
+    spend_data.append({
+        "Supplier": supplier_name, "Category": spend_cat_key, "SubCategory": spend_sub_cat,
+        "BusinessUnit": random.choice(tw_business_units), "Date": spend_date.strftime('%Y-%m-%d'), "Amount": amount,
+        "InvoiceID": generate_invoice_id(), "POID": generate_po_id(), "PaymentTerms": payment_terms_for_supplier, "Currency": CURRENCY
+    })
+spend_df = pd.DataFrame(spend_data)
+
+# --- SAVING FILES TO SPECIFIED DIRECTORY ---
+print("Data generation complete. Preparing CSV output.")
+output_directory = r"C:\Users\bansala4846\OneDrive - ARCADIS\Desktop\Rep_Ready\ProcureInsightsTool\Sample Data"
+if not os.path.exists(output_directory):
+    print(f"ERROR: Output directory does not exist: {output_directory}")
+    print("Please create this folder manually and then re-run the script.")
+    exit()
+if not os.path.isdir(output_directory):
+    print(f"ERROR: The specified output path is not a directory: {output_directory}")
+    exit()
+
+supplier_master_path = os.path.join(output_directory, "supplier_master_data_template.csv")
+contract_data_path = os.path.join(output_directory, "contract_data_template.csv")
+supplier_performance_path = os.path.join(output_directory, "supplier_performance_data_template.csv")
+spend_data_path = os.path.join(output_directory, "spend_data_template.csv")
+
+try:
+    supplier_master_df.to_csv(supplier_master_path, index=False)
+    contract_df.to_csv(contract_data_path, index=False)
+    supplier_performance_df.to_csv(supplier_performance_path, index=False)
+    spend_df.to_csv(spend_data_path, index=False)
+    print(f"\nCSV files have been successfully generated in: {output_directory}")
+    print(f"- {os.path.basename(supplier_master_path)}")
+    print(f"- {os.path.basename(contract_data_path)}")
+    print(f"- {os.path.basename(supplier_performance_path)}")
+    print(f"- {os.path.basename(spend_data_path)}")
+except Exception as e:
+    print(f"\nAn error occurred while saving the CSV files: {e}")
+    print("Please check the output directory path and permissions.")

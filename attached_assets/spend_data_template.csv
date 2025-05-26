@@ -1,0 +1,201 @@
+Supplier,SupplierID,Category,SubCategory,BusinessUnit,Date,Amount,InvoiceID,POID,PaymentTerms,Currency,ContractID,Region,RiskScore,SavingsOpportunity
+Flow Insight Advisory 2,TW_SUP_3837,Technology & IT,Billing Software Licenses,Customer Operations & Retail,2021-08-02,573467,TW_INV_C70BAA1C,TW_PO_18965BB6,Net 30,USD,TW_CON_6F3A483,International,64,63979
+UK Wilson Services,TW_SUP_9534,Utilities & Energy,Renewable Energy Generation,Finance & Regulation,2023-02-14,5234,TW_INV_E325B30E,TW_PO_F299E148,Net 90,GBP,TW_CON_F795397,South,89,689
+Data Taylor Advisory,TW_SUP_4758,Business Services,Customer Call Centre Services,Strategic Resource Planning,2022-11-13,12485,TW_INV_E27691A4,TW_PO_DADA6734,Net 30,USD,TW_CON_CBA46F6,West,56,1755
+Severn Brown Utilities,TW_SUP_3159,Business Services,Customer Call Centre Services,"Health, Safety & Environment",2022-02-22,56915,TW_INV_B20E0F2A,TW_PO_4DAA5187,Net 45,USD,TW_CON_BE565D1,Central,19,6484
+Flow Insight Advisory 2,TW_SUP_6351,Fleet & Logistics,Vehicle Maintenance,Human Resources,2024-09-03,147720,TW_INV_EFDA18FC,TW_PO_F4451DAB,Net 45,USD,TW_CON_D44EC47,East,15,10802
+UK Wilson Services,TW_SUP_9402,Technology & IT,SCADA Systems,Human Resources,2022-08-17,458305,TW_INV_727FA494,TW_PO_2F9505F7,Net 45,USD,TW_CON_60E0836,North,56,6228
+Chem Thomas Group,TW_SUP_4209,Technology & IT,SCADA Systems,Water Production & Treatment,2023-05-18,747217,TW_INV_70553B5,TW_PO_8113D7EF,Net 90,GBP,TW_CON_99DD3B7,International,37,63031
+Severn Thomas Engineering,TW_SUP_5801,Fleet & Logistics,Equipment Rental,Capital Delivery Programmes,2022-07-10,134722,TW_INV_455D6D51,TW_PO_BA90EC42,Net 90,GBP,TW_CON_6532733,International,58,17432
+UK Wilson Services,TW_SUP_3555,Infrastructure & Assets,Pipeline Renewal,Capital Delivery Programmes,2022-01-23,76374,TW_INV_D7AD5D54,TW_PO_3C77C951,Net 60,GBP,TW_CON_2A84D53,Central,98,1961
+Clear Consulting,TW_SUP_8000,Maintenance & Repair,Scheduled Maintenance Works,Human Resources,2024-09-14,94732,TW_INV_9DA49A9C,TW_PO_6AE0FF1F,Net 60,USD,TW_CON_83AF928,Central,23,4042
+Data Hydro-Dynamics,TW_SUP_9072,Maintenance & Repair,Emergency Repairs,Customer Operations & Retail,2024-08-29,38465,TW_INV_554BA0D3,TW_PO_F625F937,Net 45,USD,TW_CON_AB990F5,South,28,1313
+Southern Cyber-Ltd,TW_SUP_9691,Professional & Consultancy Services,Financial Audit,Strategic Resource Planning,2023-10-06,16555,TW_INV_C3EE8074,TW_PO_9EB9815B,Net 45,GBP,TW_CON_3DA59A2,International,41,755
+UK Thomas Water,TW_SUP_4489,Infrastructure & Assets,New Connections,Customer Operations & Retail,2023-08-21,354817,TW_INV_AD4B47D9,TW_PO_761E7D11,Net 60,GBP,TW_CON_D428CBE,North,89,18918
+Hydro Digital-Tech,TW_SUP_9137,Technology & IT,Data Analytics Platforms,Network Operations & Maintenance,2023-09-07,705122,TW_INV_2637998,TW_PO_76DC7E30,Net 30,EUR,TW_CON_BEE7F51,North,10,101749
+UK Thomas Water,TW_SUP_2088,Maintenance & Repair,Emergency Repairs,Human Resources,2024-09-28,148314,TW_INV_949BC189,TW_PO_FF6EC412,Net 90,USD,TW_CON_F882DB9,East,6,20792
+London Data-Ltd,TW_SUP_7998,Infrastructure & Assets,Pipeline Renewal,Water Production & Treatment,2023-11-21,285149,TW_INV_1E1438AB,TW_PO_D6D0D3F2,Net 90,USD,TW_CON_5AFC705,West,50,2874
+Enviro Enviro-Dynamics,TW_SUP_1077,Fleet & Logistics,Fuel Costs,Wastewater Collection & Treatment,2023-03-29,86291,TW_INV_9DF7BEC7,TW_PO_5EC4EA31,Net 60,GBP,TW_CON_A120C84,North,32,9168
+Kennet Southern-Solutions,TW_SUP_4400,Operational Consumables,Safety Equipment,Strategic Resource Planning,2022-07-13,132009,TW_INV_D8E4C319,TW_PO_621D70A9,Net 45,GBP,TW_CON_EFC8D28,West,58,19348
+Chem Insight Advisory 2,TW_SUP_4608,Professional & Consultancy Services,Legal Counsel,"Health, Safety & Environment",2023-08-30,95161,TW_INV_AFDFCABE,TW_PO_753B9691,Net 30,USD,TW_CON_A144BC8,International,91,4527
+Cyber Clear-Consulting,TW_SUP_3797,Utilities & Energy,Electricity,"Health, Safety & Environment",2022-05-24,76583,TW_INV_338AB476,TW_PO_A48A5AAC,Net 30,EUR,TW_CON_A6FA85F,North,69,9212
+Aqua Davies Water,TW_SUP_9100,Maintenance & Repair,Emergency Repairs,Finance & Regulation,2022-10-22,128304,TW_INV_8B0CD873,TW_PO_29F36902,Net 45,EUR,TW_CON_7415BE8,Central,22,15106
+Tech Insight Consulting 2,TW_SUP_3937,Professional & Consultancy Services,Financial Audit,Procurement & Supply Chain,2024-07-13,14416,TW_INV_E66897FC,TW_PO_3583E4BD,Net 45,GBP,TW_CON_57ABE20,West,43,1366
+Severn PLC,TW_SUP_3628,Professional & Consultancy Services,Leakage Consultancy,Wastewater Collection & Treatment,2022-01-18,120751,TW_INV_8A76FCC6,TW_PO_D5ACF005,Net 45,EUR,TW_CON_B717035,West,28,8740
+UK Wilson Services,TW_SUP_8232,Infrastructure & Assets,Pipeline Renewal,Wastewater Collection & Treatment,2022-11-25,234572,TW_INV_EA5926DE,TW_PO_C570271D,Net 45,GBP,TW_CON_47BC1C8,West,24,3069
+Hydro Roberts PLC,TW_SUP_4469,Operational Consumables,Safety Equipment,Procurement & Supply Chain,2025-04-10,139665,TW_INV_8B22B345,TW_PO_85A4A822,Net 30,USD,TW_CON_4FA713E,South,2,3778
+Flow Williams Solutions,TW_SUP_9862,Maintenance & Repair,Emergency Repairs,Procurement & Supply Chain,2022-05-19,71415,TW_INV_50AD2364,TW_PO_451EAD5B,Net 45,USD,TW_CON_C67F9E4,West,14,8083
+Clear Consulting,TW_SUP_1705,Utilities & Energy,Electricity,Customer Operations & Retail,2024-09-19,104287,TW_INV_68376D62,TW_PO_CBBA3C0B,Net 60,EUR,TW_CON_2F710C2,North,55,11161
+Tech Williams Engineering,TW_SUP_1215,Operational Consumables,Pipe Fittings,Finance & Regulation,2024-02-27,75844,TW_INV_82603CE,TW_PO_9C1631AC,Net 45,EUR,TW_CON_4E06818,West,44,7916
+Severn Jones Group,TW_SUP_3361,Utilities & Energy,Renewable Energy Generation,Asset Management Strategy,2024-09-20,45874,TW_INV_F48B12E0,TW_PO_12921314,Net 45,USD,TW_CON_C39B75D,South,90,1060
+Chem Technologies,TW_SUP_1686,Infrastructure & Assets,Treatment Plant Upgrades,Finance & Regulation,2023-01-20,237465,TW_INV_2FAB3890,TW_PO_F94439E0,Net 60,GBP,TW_CON_C830D69,East,59,24007
+Tech Aqua-Engineering,TW_SUP_9161,Business Services,Customer Call Centre Services,Capital Delivery Programmes,2022-11-02,62916,TW_INV_ED5473C9,TW_PO_BA5349AC,Net 60,USD,TW_CON_41EFD05,West,62,1378
+Chem Thomas Consulting,TW_SUP_6948,Utilities & Energy,Electricity,IT & Digital Transformation,2024-01-03,130111,TW_INV_A6EC8DCE,TW_PO_6FC25E65,Net 90,USD,TW_CON_ECFBF2,Central,70,11862
+Enviro Taylor Utilities,TW_SUP_8643,Fleet & Logistics,Logistics & Haulage,"Health, Safety & Environment",2023-03-24,68598,TW_INV_2FD159C3,TW_PO_9A00203C,Net 45,GBP,TW_CON_2B8481,Central,7,9370
+Data Taylor Advisory,TW_SUP_9295,Utilities & Energy,Renewable Energy Generation,IT & Digital Transformation,2025-02-11,92586,TW_INV_936310C7,TW_PO_608A2609,Net 60,EUR,TW_CON_FF1596,South,23,7394
+UK Thomas Water,TW_SUP_8410,Maintenance & Repair,Equipment Servicing,Finance & Regulation,2023-05-12,115299,TW_INV_B2B06ADB,TW_PO_42BFEA54,Net 45,GBP,TW_CON_E7AC3CF,International,32,3845
+Chem Thomas Consulting,TW_SUP_3288,Maintenance & Repair,Emergency Repairs,Human Resources,2022-08-07,23065,TW_INV_4081A232,TW_PO_33B2D1C0,Net 60,GBP,TW_CON_4CD6544,East,8,879
+Chem Thomas Services,TW_SUP_5050,Infrastructure & Assets,New Connections,Human Resources,2025-03-21,360667,TW_INV_B0559B5A,TW_PO_1AEF9840,Net 90,EUR,TW_CON_2B2B085,Central,27,37918
+Chem Insight Consulting 2,TW_SUP_5106,Infrastructure & Assets,Treatment Plant Upgrades,Strategic Resource Planning,2025-01-11,297627,TW_INV_D04EC39E,TW_PO_482B5AC6,Net 45,EUR,TW_CON_8511DA1,South,57,9342
+Chem Technologies,TW_SUP_9606,Utilities & Energy,Electricity,Water Production & Treatment,2025-05-21,142311,TW_INV_17CE2A24,TW_PO_E2B9AA3E,Net 45,EUR,TW_CON_2BA2BA,International,38,2109
+Tech Insight Consulting 2,TW_SUP_3786,Fleet & Logistics,Fuel Costs,Network Operations & Maintenance,2023-01-14,71386,TW_INV_44162EB3,TW_PO_4442D59C,Net 90,GBP,TW_CON_61F0749,South,66,3253
+Data PLC,TW_SUP_9106,Utilities & Energy,Renewable Energy Generation,Network Operations & Maintenance,2021-12-17,17268,TW_INV_117F6AC3,TW_PO_5513EFB9,Net 60,USD,TW_CON_15290E1,West,38,1278
+Hydro Smith Solutions,TW_SUP_3496,Utilities & Energy,Electricity,Procurement & Supply Chain,2024-06-07,80926,TW_INV_9659CF69,TW_PO_B2BC1C4D,Net 60,USD,TW_CON_9A3C53,Central,93,5031
+Tech Williams Engineering,TW_SUP_2785,Fleet & Logistics,Fuel Costs,Procurement & Supply Chain,2021-07-11,87403,TW_INV_E40EA817,TW_PO_31692628,Net 60,GBP,TW_CON_498DA24,International,7,3307
+Flow Williams Solutions,TW_SUP_4604,Business Services,HR & Payroll Services,Finance & Regulation,2024-05-21,92997,TW_INV_5164A1A8,TW_PO_26B55EED,Net 60,EUR,TW_CON_C724334,North,24,6651
+Clear Wilson Engineering,TW_SUP_3713,Utilities & Energy,Electricity,Customer Operations & Retail,2024-09-13,120464,TW_INV_658D4DA7,TW_PO_CCA3E0C9,Net 60,GBP,TW_CON_F7E3E64,Central,59,11245
+Chem Thomas Consulting,TW_SUP_1946,Business Services,Training & Development,Water Production & Treatment,2023-12-07,149417,TW_INV_4587BBDA,TW_PO_77F62953,Net 45,USD,TW_CON_CBD56CB,West,38,20645
+Chem Insight Advisory 2,TW_SUP_6386,Infrastructure & Assets,New Connections,Human Resources,2022-07-16,572013,TW_INV_BF27B6AC,TW_PO_EE4AE98D,Net 45,GBP,TW_CON_D3D3DEF,International,81,78392
+Thames Williams Utilities,TW_SUP_1256,Fleet & Logistics,Vehicle Maintenance,Network Operations & Maintenance,2022-12-31,83182,TW_INV_E0B152CC,TW_PO_57ABBCBF,Net 45,GBP,TW_CON_5986F23,International,49,11369
+Severn Thomas Engineering,TW_SUP_6356,Infrastructure & Assets,Reservoir Construction,Human Resources,2023-06-23,357864,TW_INV_4487641A,TW_PO_266FA554,Net 90,USD,TW_CON_2CCD336,West,75,53632
+Digital Williams Solutions,TW_SUP_5772,Utilities & Energy,Renewable Energy Generation,Finance & Regulation,2023-12-05,14735,TW_INV_FC8324FE,TW_PO_E1DF00FC,Net 60,EUR,TW_CON_149C084,South,20,552
+Hydro Southern-Advisory,TW_SUP_3372,Operational Consumables,Office Supplies,Network Operations & Maintenance,2022-01-05,141272,TW_INV_8588FB24,TW_PO_A3C40AD,Net 60,USD,TW_CON_7EEDD8A,West,90,3433
+Digital Williams Solutions,TW_SUP_3695,Professional & Consultancy Services,Financial Audit,Human Resources,2021-11-09,66874,TW_INV_2A3D2414,TW_PO_2152A239,Net 60,USD,TW_CON_1C33DAA,East,11,2605
+Tech Williams Engineering,TW_SUP_4211,Business Services,HR & Payroll Services,Strategic Resource Planning,2024-11-23,29185,TW_INV_FE7A5C36,TW_PO_32078B8E,Net 45,GBP,TW_CON_A814726,North,25,636
+UK Jones Systems,TW_SUP_5908,Maintenance & Repair,Scheduled Maintenance Works,Strategic Resource Planning,2024-07-24,75183,TW_INV_383E7B76,TW_PO_A0F0212F,Net 90,GBP,TW_CON_1103541,South,38,3089
+Flow Insight Advisory 2,TW_SUP_8692,Professional & Consultancy Services,Legal Counsel,Water Production & Treatment,2022-03-31,13507,TW_INV_32D210E3,TW_PO_C778E10,Net 45,USD,TW_CON_FEE4F67,Central,11,761
+Southern London-Solutions,TW_SUP_9726,Professional & Consultancy Services,Environmental Impact Assessment,Customer Operations & Retail,2023-02-03,85271,TW_INV_4CA7F6C1,TW_PO_7FEDCC79,Net 45,USD,TW_CON_2788E9F,West,74,5743
+Tech Thames-Technologies,TW_SUP_9838,Fleet & Logistics,Equipment Rental,"Health, Safety & Environment",2022-05-26,64252,TW_INV_D420FFD9,TW_PO_347E389,Net 45,EUR,TW_CON_8764BC4,South,32,7204
+Kennet Southern-Solutions,TW_SUP_7036,Technology & IT,Data Analytics Platforms,Water Production & Treatment,2024-07-31,633972,TW_INV_8663AF01,TW_PO_49D1F1E,Net 60,USD,TW_CON_65ABC2C,International,30,28371
+Tech Thames-Technologies,TW_SUP_5529,Fleet & Logistics,Equipment Rental,Customer Operations & Retail,2024-03-01,145431,TW_INV_BEDC0289,TW_PO_8886F44A,Net 90,EUR,TW_CON_DC8484A,International,56,14078
+Severn Davies Tech,TW_SUP_7634,Business Services,Training & Development,IT & Digital Transformation,2024-09-07,135015,TW_INV_690B1E32,TW_PO_C0FDAD1B,Net 90,USD,TW_CON_18AA74F,International,96,9560
+Tech Aqua-Engineering,TW_SUP_6400,Infrastructure & Assets,Treatment Plant Upgrades,Wastewater Collection & Treatment,2024-09-18,461430,TW_INV_D56EAD85,TW_PO_B43462C5,Net 90,EUR,TW_CON_BDAE056,South,36,62772
+Severn Brown Utilities,TW_SUP_8221,Infrastructure & Assets,New Connections,Human Resources,2025-05-03,253085,TW_INV_93A5D487,TW_PO_AF30AEE4,Net 30,GBP,TW_CON_BF61956,North,58,6487
+Enviro Taylor Utilities,TW_SUP_4964,Technology & IT,SCADA Systems,IT & Digital Transformation,2024-12-30,280291,TW_INV_48EF00E4,TW_PO_BBFD7405,Net 30,EUR,TW_CON_69F39D0,West,38,29624
+Tech Insight Consulting 2,TW_SUP_9966,Maintenance & Repair,Equipment Servicing,Customer Operations & Retail,2023-11-11,77951,TW_INV_9A13B74,TW_PO_B7C656AB,Net 30,EUR,TW_CON_F41B585,Central,3,6571
+Chem Technologies,TW_SUP_3157,Technology & IT,SCADA Systems,Wastewater Collection & Treatment,2023-01-23,293125,TW_INV_CA8213D6,TW_PO_995E8D01,Net 45,GBP,TW_CON_6ABB7E,Central,31,4521
+Thames Williams Utilities,TW_SUP_5341,Fleet & Logistics,Logistics & Haulage,Asset Management Strategy,2025-01-03,96847,TW_INV_C15E3341,TW_PO_CBBC81D8,Net 60,USD,TW_CON_ED4977A,Central,47,6649
+Clear Consulting,TW_SUP_4277,Utilities & Energy,Electricity,Strategic Resource Planning,2023-11-03,113233,TW_INV_5EEABAC3,TW_PO_11738086,Net 30,EUR,TW_CON_EF855FE,West,89,10075
+Tech Insight Consulting 3,TW_SUP_4256,Fleet & Logistics,Fuel Costs,Capital Delivery Programmes,2022-02-13,7855,TW_INV_E1AE17D2,TW_PO_CAF3E2A5,Net 45,USD,TW_CON_D269812,West,96,1077
+Flow Williams Solutions,TW_SUP_7938,Operational Consumables,Pipe Fittings,Finance & Regulation,2021-06-12,124821,TW_INV_9A1E6E37,TW_PO_AE98175C,Net 60,USD,TW_CON_624FD5,North,62,9004
+Digital Williams Group,TW_SUP_3627,Maintenance & Repair,Emergency Repairs,Finance & Regulation,2021-10-07,44281,TW_INV_36786EE6,TW_PO_723534E6,Net 30,EUR,TW_CON_37BFBF7,West,71,5609
+UK Wilson Services,TW_SUP_1244,Fleet & Logistics,Vehicle Maintenance,Finance & Regulation,2023-11-28,17381,TW_INV_392D69FC,TW_PO_A4518328,Net 30,EUR,TW_CON_E2D6DD6,West,25,611
+UK Jones Systems,TW_SUP_2932,Maintenance & Repair,Scheduled Maintenance Works,Strategic Resource Planning,2023-12-29,141825,TW_INV_EF174A17,TW_PO_75B46BFD,Net 45,USD,TW_CON_6704B7,International,19,4096
+Clear Consulting,TW_SUP_2473,Professional & Consultancy Services,Financial Audit,"Health, Safety & Environment",2024-09-10,36966,TW_INV_EDCF35C4,TW_PO_38B69B6C,Net 60,GBP,TW_CON_5D8FC7,Central,16,1715
+Enviro Insight Partners 3,TW_SUP_9756,Infrastructure & Assets,Reservoir Construction,Wastewater Collection & Treatment,2023-09-10,86351,TW_INV_64B74382,TW_PO_8621AD92,Net 45,USD,TW_CON_A06BE70,West,32,8824
+UK Wilson Services,TW_SUP_2584,Maintenance & Repair,Emergency Repairs,Human Resources,2024-02-28,131781,TW_INV_DE74B476,TW_PO_8FB7693,Net 60,EUR,TW_CON_B341EC6,East,42,12465
+UK Thomas Water,TW_SUP_9526,Fleet & Logistics,Equipment Rental,Human Resources,2025-03-24,22102,TW_INV_9168872D,TW_PO_3FB4DEC7,Net 30,USD,TW_CON_E0B5CA,Central,91,1044
+Hydro Digital-Tech,TW_SUP_7528,Infrastructure & Assets,New Connections,"Health, Safety & Environment",2024-03-24,391824,TW_INV_1A91E9D0,TW_PO_C8F2ECC3,Net 30,EUR,TW_CON_555C7F3,West,61,28518
+Clear Consulting,TW_SUP_5512,Professional & Consultancy Services,Engineering Design,Strategic Resource Planning,2024-12-27,26288,TW_INV_4ACB803A,TW_PO_C949AD69,Net 45,USD,TW_CON_88C86D3,Central,97,3482
+Flow Insight Advisory 2,TW_SUP_8471,Business Services,Customer Call Centre Services,Capital Delivery Programmes,2022-04-20,78519,TW_INV_73C498FA,TW_PO_DE07C1E5,Net 60,GBP,TW_CON_E507D87,West,68,7522
+Hydro Smith Solutions,TW_SUP_8931,Utilities & Energy,Electricity,Wastewater Collection & Treatment,2022-12-09,89895,TW_INV_12B972BE,TW_PO_FD92BC7A,Net 90,GBP,TW_CON_EE48A4B,Central,20,10468
+Enviro Taylor Utilities,TW_SUP_6132,Technology & IT,Data Analytics Platforms,Network Operations & Maintenance,2025-05-20,536232,TW_INV_9187256D,TW_PO_FF9B8AE9,Net 60,EUR,TW_CON_CA56B7E,West,47,68025
+Southern Cyber-Ltd,TW_SUP_7612,Operational Consumables,Water Treatment Chemicals,Water Production & Treatment,2024-05-26,11423,TW_INV_D59409CD,TW_PO_FE29CC86,Net 30,EUR,TW_CON_4C95358,South,61,411
+Tech Aqua-Engineering,TW_SUP_8987,Operational Consumables,Pipe Fittings,Network Operations & Maintenance,2025-01-17,35089,TW_INV_59B7F3B5,TW_PO_5DB999DE,Net 30,GBP,TW_CON_D1452DD,International,95,2942
+Data PLC,TW_SUP_9615,Infrastructure & Assets,Pipeline Renewal,Capital Delivery Programmes,2021-08-13,698692,TW_INV_1C52666D,TW_PO_96D2C3DF,Net 45,USD,TW_CON_4CC92EC,East,28,86359
+Tech Insight Consulting 2,TW_SUP_8540,Utilities & Energy,Renewable Energy Generation,Wastewater Collection & Treatment,2021-12-15,122385,TW_INV_574EA327,TW_PO_B0DF1F5E,Net 30,USD,TW_CON_E64D293,East,9,4904
+Chem Insight Advisory 2,TW_SUP_2931,Technology & IT,Data Analytics Platforms,"Health, Safety & Environment",2025-02-12,583699,TW_INV_2190E495,TW_PO_E045C48E,Net 90,EUR,TW_CON_AEE617D,International,41,67147
+Data PLC,TW_SUP_2907,Maintenance & Repair,Scheduled Maintenance Works,Human Resources,2024-07-28,128068,TW_INV_F22CD2E3,TW_PO_D6945623,Net 30,USD,TW_CON_EBED475,North,88,8081
+Tech Insight Consulting 3,TW_SUP_4962,Operational Consumables,Pipe Fittings,Wastewater Collection & Treatment,2025-04-25,63366,TW_INV_F5A7D3BF,TW_PO_D982415B,Net 30,EUR,TW_CON_96A0B6C,Central,41,7683
+Data PLC,TW_SUP_4138,Fleet & Logistics,Vehicle Maintenance,Finance & Regulation,2021-11-11,80980,TW_INV_DC84BF52,TW_PO_44F4FBC4,Net 90,GBP,TW_CON_987308E,West,53,3829
+Hydro Southern-Advisory,TW_SUP_7171,Maintenance & Repair,Equipment Servicing,Human Resources,2021-06-10,112071,TW_INV_7A3DE641,TW_PO_71E4C99A,Net 45,GBP,TW_CON_1454E70,North,33,12921
+Flow Insight Advisory 2,TW_SUP_2448,Professional & Consultancy Services,Engineering Design,Capital Delivery Programmes,2025-05-11,135673,TW_INV_C96E0BEA,TW_PO_2738D340,Net 60,GBP,TW_CON_FB0442D,North,96,11881
+Chem Thomas Consulting,TW_SUP_4675,Fleet & Logistics,Logistics & Haulage,Strategic Resource Planning,2025-04-19,6687,TW_INV_A2E818B1,TW_PO_219D079,Net 60,EUR,TW_CON_762E2EA,South,22,119
+Chem Thomas Services,TW_SUP_2624,Professional & Consultancy Services,Leakage Consultancy,Capital Delivery Programmes,2024-07-15,67879,TW_INV_644AA6C8,TW_PO_52DD0EA7,Net 90,EUR,TW_CON_6C35219,East,62,8576
+Data UK-Engineering,TW_SUP_4882,Infrastructure & Assets,Reservoir Construction,Procurement & Supply Chain,2023-09-13,693085,TW_INV_45AD3CE3,TW_PO_7A7DB72D,Net 90,EUR,TW_CON_18EDA76,North,14,28714
+Hydro Roberts PLC,TW_SUP_8291,Utilities & Energy,Electricity,Customer Operations & Retail,2023-07-20,58203,TW_INV_4ECF9B2,TW_PO_DC11B83C,Net 45,EUR,TW_CON_26E1085,North,77,5237
+Digital Williams Group,TW_SUP_2604,Professional & Consultancy Services,Financial Audit,Asset Management Strategy,2024-06-30,89120,TW_INV_EE710D35,TW_PO_FD43D3F5,Net 45,GBP,TW_CON_52C4F37,International,25,5285
+Enviro Taylor Utilities,TW_SUP_8938,Infrastructure & Assets,Pipeline Renewal,Network Operations & Maintenance,2024-09-30,242513,TW_INV_F4E39A15,TW_PO_20EEEB9A,Net 45,USD,TW_CON_6B32E07,South,88,9333
+Chem Thomas Services,TW_SUP_7320,Utilities & Energy,Electricity,Asset Management Strategy,2022-11-02,146494,TW_INV_A44EB53,TW_PO_8B1571D4,Net 60,GBP,TW_CON_8F7488F,West,17,5481
+Southern Cyber-Ltd,TW_SUP_2296,Operational Consumables,Pipe Fittings,IT & Digital Transformation,2024-10-06,58964,TW_INV_BECC0B82,TW_PO_8F019D96,Net 60,EUR,TW_CON_2348396,Central,81,8061
+Enviro Taylor Utilities,TW_SUP_7402,Operational Consumables,Office Supplies,Water Production & Treatment,2021-06-01,146239,TW_INV_C70AC0A8,TW_PO_A37DC9A0,Net 90,EUR,TW_CON_D7B6BF0,Central,50,18391
+Hydro Southern-Advisory,TW_SUP_1002,Infrastructure & Assets,Treatment Plant Upgrades,Network Operations & Maintenance,2021-11-23,512940,TW_INV_230169C2,TW_PO_3ACF2671,Net 60,GBP,TW_CON_7C9CD73,Central,59,25996
+Chem Thomas Group,TW_SUP_2490,Business Services,HR & Payroll Services,Network Operations & Maintenance,2025-01-16,143195,TW_INV_F202DA08,TW_PO_30A34400,Net 45,USD,TW_CON_7A70E32,South,28,2959
+Cyber Clear-Consulting,TW_SUP_7587,Technology & IT,Cybersecurity Services,Strategic Resource Planning,2023-04-01,653158,TW_INV_228799BF,TW_PO_523BDF9C,Net 45,GBP,TW_CON_2F30A08,East,91,31078
+Hydro Southern-Advisory,TW_SUP_8911,Maintenance & Repair,Equipment Servicing,Human Resources,2022-10-26,136744,TW_INV_A8FECAD0,TW_PO_CBD7A87E,Net 90,USD,TW_CON_CB785AD,International,30,13798
+Tech Williams Engineering,TW_SUP_5593,Business Services,HR & Payroll Services,IT & Digital Transformation,2021-05-24,71976,TW_INV_B4305DD5,TW_PO_264C4AFC,Net 90,USD,TW_CON_CD500AB,International,85,6514
+Clear Wilson Engineering,TW_SUP_7131,Technology & IT,SCADA Systems,Customer Operations & Retail,2024-08-28,84107,TW_INV_673B9CC9,TW_PO_968D6AA,Net 60,EUR,TW_CON_923E206,International,38,2157
+Enviro Taylor Utilities,TW_SUP_9835,Technology & IT,Cybersecurity Services,Asset Management Strategy,2022-05-20,295061,TW_INV_57A93D46,TW_PO_350E9AB4,Net 30,GBP,TW_CON_15B269,Central,42,23803
+Severn Davies Tech,TW_SUP_5631,Operational Consumables,Water Treatment Chemicals,Capital Delivery Programmes,2021-08-22,141745,TW_INV_354E6B3A,TW_PO_C227D91C,Net 60,EUR,TW_CON_F5CBC7F,South,23,8657
+Enviro Enviro-Dynamics,TW_SUP_6450,Operational Consumables,Office Supplies,"Health, Safety & Environment",2023-06-21,34889,TW_INV_60B07C48,TW_PO_A834EC0D,Net 30,USD,TW_CON_4C4A198,West,19,1351
+Chem Thomas Consulting,TW_SUP_3904,Operational Consumables,Safety Equipment,Capital Delivery Programmes,2023-11-22,60800,TW_INV_CB27870C,TW_PO_9C3660C0,Net 30,GBP,TW_CON_CA8674C,North,6,2086
+Clear Consulting,TW_SUP_5170,Infrastructure & Assets,New Connections,Strategic Resource Planning,2023-02-15,405678,TW_INV_7408A70C,TW_PO_5CAC69A5,Net 45,GBP,TW_CON_9F38510,West,60,22521
+Cyber Digital-Advisory,TW_SUP_3052,Infrastructure & Assets,Pipeline Renewal,Procurement & Supply Chain,2024-03-18,125232,TW_INV_A7D7F337,TW_PO_1FF7757D,Net 45,USD,TW_CON_3C9C02D,South,9,4923
+Chem Technologies,TW_SUP_3831,Infrastructure & Assets,Treatment Plant Upgrades,Water Production & Treatment,2023-01-22,422861,TW_INV_FA76B09E,TW_PO_F53C42EA,Net 60,EUR,TW_CON_4D66A81,West,7,60869
+Digital Jones PLC,TW_SUP_2550,Infrastructure & Assets,Pipeline Renewal,Customer Operations & Retail,2022-03-12,106755,TW_INV_ED75513B,TW_PO_649BA80A,Net 30,USD,TW_CON_335DC30,West,91,9372
+Tech Aqua-Engineering,TW_SUP_8927,Professional & Consultancy Services,Leakage Consultancy,"Health, Safety & Environment",2023-10-08,56321,TW_INV_12FFE9AA,TW_PO_A8D728D2,Net 60,EUR,TW_CON_F6731C7,Central,59,7876
+Clear Wilson Engineering,TW_SUP_7964,Business Services,HR & Payroll Services,Wastewater Collection & Treatment,2023-02-10,99928,TW_INV_82AF5D81,TW_PO_9AE2B61E,Net 30,EUR,TW_CON_7EBCD6C,East,92,4231
+Tech Insight Consulting 3,TW_SUP_9174,Operational Consumables,Office Supplies,IT & Digital Transformation,2022-08-19,57957,TW_INV_D1FDF151,TW_PO_AF81AF9,Net 45,USD,TW_CON_8BE3D8,East,70,4555
+Digital Williams Solutions,TW_SUP_6523,Maintenance & Repair,Scheduled Maintenance Works,Strategic Resource Planning,2024-06-07,39538,TW_INV_29157C1E,TW_PO_CEB6E169,Net 30,EUR,TW_CON_B74EB79,International,99,908
+Severn Brown Utilities,TW_SUP_9716,Professional & Consultancy Services,Engineering Design,Finance & Regulation,2021-05-26,62102,TW_INV_4C1590D1,TW_PO_71F97D89,Net 45,EUR,TW_CON_78991ED,East,22,9025
+Cyber Digital-Advisory,TW_SUP_8229,Utilities & Energy,Electricity,IT & Digital Transformation,2023-08-10,149285,TW_INV_79313B09,TW_PO_6FC37B19,Net 30,EUR,TW_CON_D643ECB,North,41,15856
+Chem Thomas Consulting,TW_SUP_1804,Professional & Consultancy Services,Leakage Consultancy,Network Operations & Maintenance,2021-11-16,69596,TW_INV_2E93A4CB,TW_PO_73788E1,Net 60,GBP,TW_CON_9B6B93A,North,64,4810
+Severn Brown Utilities,TW_SUP_9510,Infrastructure & Assets,Treatment Plant Upgrades,Human Resources,2022-01-26,623642,TW_INV_F904D700,TW_PO_AEFB61BF,Net 45,GBP,TW_CON_CAD5951,Central,60,7545
+Aqua Davies Water,TW_SUP_3932,Fleet & Logistics,Equipment Rental,Network Operations & Maintenance,2023-08-02,117274,TW_INV_6644A1F5,TW_PO_8BED0C4A,Net 60,USD,TW_CON_43F7B57,South,63,17252
+Tech Thames-Technologies,TW_SUP_9692,Infrastructure & Assets,Reservoir Construction,Network Operations & Maintenance,2022-12-06,206198,TW_INV_7365445D,TW_PO_8414FA5C,Net 45,EUR,TW_CON_C55BD72,West,12,3151
+Southern Cyber-Ltd,TW_SUP_7525,Technology & IT,Cybersecurity Services,Customer Operations & Retail,2022-09-24,413536,TW_INV_AC195AC,TW_PO_FFC2EA22,Net 45,USD,TW_CON_F1DFCB1,East,60,22659
+Severn Jones Group,TW_SUP_1262,Technology & IT,Billing Software Licenses,Asset Management Strategy,2024-08-26,134942,TW_INV_FA8697A0,TW_PO_95EC1B1,Net 90,EUR,TW_CON_CFBB40F,East,36,12188
+Thames Insight Advisory 1,TW_SUP_3029,Utilities & Energy,Renewable Energy Generation,Procurement & Supply Chain,2025-03-14,64712,TW_INV_5483644A,TW_PO_D506E8F0,Net 90,EUR,TW_CON_F86C2E4,Central,74,8323
+Tech Aqua-Engineering,TW_SUP_7492,Infrastructure & Assets,New Connections,Capital Delivery Programmes,2023-07-02,571131,TW_INV_F812A2C5,TW_PO_67CE9CA,Net 30,GBP,TW_CON_48AE038,East,4,73077
+Severn Jones Group,TW_SUP_3818,Technology & IT,Cloud Hosting,Asset Management Strategy,2024-05-26,345141,TW_INV_FAD121A2,TW_PO_96178A5E,Net 30,GBP,TW_CON_E30051E,International,91,40203
+Chem Technologies,TW_SUP_4307,Maintenance & Repair,Equipment Servicing,Customer Operations & Retail,2023-08-23,76935,TW_INV_9C0EB7E1,TW_PO_B8ED23B1,Net 45,EUR,TW_CON_B31A8CB,North,37,10667
+Data Taylor Advisory,TW_SUP_9801,Technology & IT,Data Analytics Platforms,"Health, Safety & Environment",2021-07-03,387857,TW_INV_EB013BFA,TW_PO_FCE3A9FE,Net 30,GBP,TW_CON_9522D8A,Central,79,18089
+Hydro Smith Solutions,TW_SUP_5717,Maintenance & Repair,Emergency Repairs,"Health, Safety & Environment",2022-02-25,92182,TW_INV_70507109,TW_PO_C9E6DEF,Net 60,EUR,TW_CON_E19B243,Central,4,9586
+Data Hydro-Dynamics,TW_SUP_7037,Utilities & Energy,Renewable Energy Generation,Human Resources,2021-09-17,149313,TW_INV_738397ED,TW_PO_2AB26E20,Net 60,EUR,TW_CON_43F7891,South,58,14495
+Severn PLC,TW_SUP_4297,Fleet & Logistics,Vehicle Maintenance,Water Production & Treatment,2024-11-11,117395,TW_INV_FE7905BA,TW_PO_A06BB221,Net 90,GBP,TW_CON_CC1CEAC,Central,40,15027
+Flow Williams Solutions,TW_SUP_7895,Professional & Consultancy Services,Environmental Impact Assessment,IT & Digital Transformation,2023-08-30,29219,TW_INV_8B4F9DC6,TW_PO_1D212E05,Net 60,USD,TW_CON_14CC883,Central,50,2197
+Tech Aqua-Engineering,TW_SUP_6158,Operational Consumables,Safety Equipment,Wastewater Collection & Treatment,2024-03-17,149928,TW_INV_1F992BDF,TW_PO_7C0F0EA4,Net 45,GBP,TW_CON_739113A,North,96,20218
+Chem Technologies,TW_SUP_5632,Fleet & Logistics,Vehicle Maintenance,Finance & Regulation,2023-07-24,2658,TW_INV_7FE5624A,TW_PO_DDA6AB5A,Net 45,EUR,TW_CON_789A90B,West,38,105
+Digital Jones PLC,TW_SUP_1276,Professional & Consultancy Services,Engineering Design,Strategic Resource Planning,2022-10-10,87915,TW_INV_67662050,TW_PO_87AAC596,Net 60,EUR,TW_CON_5FB60F9,International,72,3182
+Chem Technologies,TW_SUP_9720,Business Services,Training & Development,IT & Digital Transformation,2022-10-09,33723,TW_INV_9408A752,TW_PO_1E672483,Net 45,EUR,TW_CON_D1BB5FF,West,32,504
+Data Hydro-Dynamics,TW_SUP_4919,Infrastructure & Assets,Pipeline Renewal,Capital Delivery Programmes,2021-11-08,505736,TW_INV_1E71A16C,TW_PO_F6569B9D,Net 45,EUR,TW_CON_486EAB1,Central,39,55288
+Data Taylor Advisory,TW_SUP_4178,Business Services,Training & Development,Human Resources,2022-06-04,138247,TW_INV_69621B92,TW_PO_E1042C74,Net 90,GBP,TW_CON_741EE6,North,65,10648
+Tech Williams Engineering,TW_SUP_8304,Maintenance & Repair,Scheduled Maintenance Works,Network Operations & Maintenance,2024-08-24,108194,TW_INV_E4FDC007,TW_PO_8DF20D18,Net 90,EUR,TW_CON_84DC129,East,41,7103
+Tech Williams Engineering,TW_SUP_5183,Business Services,Training & Development,Network Operations & Maintenance,2022-05-22,15246,TW_INV_4C2919B2,TW_PO_CCF6230E,Net 90,USD,TW_CON_9FFAB2C,East,49,1239
+Enviro Insight Partners 3,TW_SUP_5944,Business Services,Training & Development,Asset Management Strategy,2022-10-20,84942,TW_INV_DD924114,TW_PO_F83AAD5C,Net 90,EUR,TW_CON_641BF14,West,20,11239
+Digital Williams Solutions,TW_SUP_7318,Operational Consumables,Office Supplies,IT & Digital Transformation,2023-09-05,128541,TW_INV_16916865,TW_PO_F4717FCB,Net 60,EUR,TW_CON_759671E,East,39,1710
+Chem Thomas Services,TW_SUP_8627,Technology & IT,Cloud Hosting,Capital Delivery Programmes,2025-04-27,438008,TW_INV_A303931B,TW_PO_EDF267B3,Net 30,EUR,TW_CON_7ADAB8E,West,44,15860
+Cyber Clear-Consulting,TW_SUP_1073,Operational Consumables,Safety Equipment,Capital Delivery Programmes,2022-02-26,75441,TW_INV_42EBD7E3,TW_PO_38D37DCD,Net 30,EUR,TW_CON_22FEA1B,East,21,9934
+Severn Consulting,TW_SUP_4410,Professional & Consultancy Services,Engineering Design,Network Operations & Maintenance,2022-07-29,50574,TW_INV_2A7C39B4,TW_PO_1BF8B72E,Net 30,USD,TW_CON_138684F,South,94,3172
+Southern London-Solutions,TW_SUP_8082,Technology & IT,Billing Software Licenses,IT & Digital Transformation,2022-08-31,129638,TW_INV_236F2A2A,TW_PO_2DB7A6AA,Net 60,USD,TW_CON_156720F,Central,33,4596
+Chem Technologies,TW_SUP_7085,Utilities & Energy,Electricity,Human Resources,2025-03-21,5797,TW_INV_AC1314F1,TW_PO_8BDF6E66,Net 60,GBP,TW_CON_EA73EF3,East,6,168
+Hydro Southern-Advisory,TW_SUP_6382,Fleet & Logistics,Logistics & Haulage,Asset Management Strategy,2022-02-06,111123,TW_INV_BE7BE456,TW_PO_655223CE,Net 45,USD,TW_CON_1AAA2EB,North,15,9939
+Enviro Taylor Utilities,TW_SUP_6660,Professional & Consultancy Services,Leakage Consultancy,Network Operations & Maintenance,2024-10-27,65599,TW_INV_28E1BAFB,TW_PO_5B583649,Net 90,USD,TW_CON_432EBF9,East,9,2740
+Southern Cyber-Ltd,TW_SUP_8463,Operational Consumables,Office Supplies,Network Operations & Maintenance,2023-04-06,52246,TW_INV_B6DFDB8B,TW_PO_793BF06D,Net 90,GBP,TW_CON_187AAAC,North,9,2410
+Severn Jones Group,TW_SUP_9234,Technology & IT,Cybersecurity Services,"Health, Safety & Environment",2023-09-16,709295,TW_INV_9845356,TW_PO_F915FCA3,Net 30,USD,TW_CON_545170B,Central,9,22793
+Enviro Insight Partners 3,TW_SUP_7562,Maintenance & Repair,Equipment Servicing,Wastewater Collection & Treatment,2023-02-12,65779,TW_INV_201991CF,TW_PO_2E03DB32,Net 90,GBP,TW_CON_39496D9,South,97,3012
+Kennet Southern-Solutions,TW_SUP_1410,Utilities & Energy,Renewable Energy Generation,"Health, Safety & Environment",2022-09-29,147764,TW_INV_B4F3AD84,TW_PO_2FD9B941,Net 30,EUR,TW_CON_FD51A0E,West,53,5257
+Hydro Digital-Tech,TW_SUP_1559,Operational Consumables,Pipe Fittings,Human Resources,2021-10-28,125732,TW_INV_C7BFCDE1,TW_PO_49144CA3,Net 90,GBP,TW_CON_696E373,Central,70,2805
+UK Wilson Services,TW_SUP_9127,Utilities & Energy,Electricity,Customer Operations & Retail,2025-02-02,141584,TW_INV_2E1F7960,TW_PO_1B6A19DE,Net 45,USD,TW_CON_CCBAD0,International,23,16875
+Enviro Taylor Utilities,TW_SUP_1869,Technology & IT,Cybersecurity Services,IT & Digital Transformation,2023-10-18,150808,TW_INV_9CA63F56,TW_PO_C5A3907D,Net 45,GBP,TW_CON_7D6A00F,Central,66,8800
+Chem Thomas Group,TW_SUP_9384,Business Services,Customer Call Centre Services,IT & Digital Transformation,2025-04-22,92298,TW_INV_43D0D409,TW_PO_90C63D07,Net 30,EUR,TW_CON_FD3A163,South,55,7806
+Flow Williams Solutions,TW_SUP_4852,Technology & IT,SCADA Systems,Human Resources,2021-08-16,644528,TW_INV_D55A3F6,TW_PO_4FD30728,Net 30,GBP,TW_CON_776AAC1,West,62,37733
+Clear Wilson Engineering,TW_SUP_1948,Business Services,Training & Development,Network Operations & Maintenance,2022-10-14,149366,TW_INV_FA25B6EE,TW_PO_5A6B433E,Net 30,GBP,TW_CON_491202E,East,34,21828
+Chem Insight Advisory 2,TW_SUP_7739,Fleet & Logistics,Fuel Costs,Human Resources,2022-12-16,90779,TW_INV_EE7F6785,TW_PO_5A6EF59C,Net 90,USD,TW_CON_B8663AA,South,48,12637
+UK Jones Systems,TW_SUP_3131,Fleet & Logistics,Logistics & Haulage,Wastewater Collection & Treatment,2022-09-15,18716,TW_INV_D15961BE,TW_PO_95872C54,Net 45,USD,TW_CON_3ACE8,Central,22,2028
+Chem Insight Consulting 2,TW_SUP_1830,Maintenance & Repair,Emergency Repairs,"Health, Safety & Environment",2022-04-12,78187,TW_INV_67B5B59B,TW_PO_C7F3BF6B,Net 60,USD,TW_CON_9F6A509,East,82,2256
+Tech Thames-Technologies,TW_SUP_9847,Maintenance & Repair,Scheduled Maintenance Works,Network Operations & Maintenance,2021-06-23,136434,TW_INV_52CEDDD7,TW_PO_1F31C1CC,Net 30,EUR,TW_CON_318765,International,75,19355
+Chem Thomas Services,TW_SUP_9537,Fleet & Logistics,Vehicle Maintenance,"Health, Safety & Environment",2022-10-13,107618,TW_INV_4D9AF09B,TW_PO_AA07157D,Net 30,USD,TW_CON_A35C36,West,9,13568
+UK Jones Systems,TW_SUP_1825,Fleet & Logistics,Vehicle Maintenance,Water Production & Treatment,2021-09-09,58691,TW_INV_8128DE84,TW_PO_53871F56,Net 60,USD,TW_CON_D7ED696,West,27,7666
+Kennet Southern-Solutions,TW_SUP_1420,Professional & Consultancy Services,Financial Audit,Network Operations & Maintenance,2023-10-30,26351,TW_INV_CF75D577,TW_PO_177B622E,Net 60,USD,TW_CON_E9B24FB,East,3,1065
+Chem Thomas Services,TW_SUP_1553,Maintenance & Repair,Equipment Servicing,Network Operations & Maintenance,2021-07-31,13054,TW_INV_E5A059F,TW_PO_9DF280E1,Net 60,EUR,TW_CON_4493E51,West,64,919
+Hydro Roberts PLC,TW_SUP_6955,Maintenance & Repair,Emergency Repairs,Asset Management Strategy,2022-11-10,61795,TW_INV_15B1AE8D,TW_PO_7B6452FB,Net 30,EUR,TW_CON_B5BA829,West,36,1894
+Hydro Smith Solutions,TW_SUP_3166,Infrastructure & Assets,Treatment Plant Upgrades,Capital Delivery Programmes,2024-03-14,89216,TW_INV_DA374F49,TW_PO_A4386C56,Net 60,EUR,TW_CON_17F372A,South,61,6825
+Thames Williams Utilities,TW_SUP_4807,Professional & Consultancy Services,Environmental Impact Assessment,Procurement & Supply Chain,2023-10-16,108616,TW_INV_A253751A,TW_PO_68ECD875,Net 45,EUR,TW_CON_2F6B85F,North,48,2018
+UK Jones Systems,TW_SUP_8948,Utilities & Energy,Renewable Energy Generation,"Health, Safety & Environment",2023-09-07,45646,TW_INV_E19F7D55,TW_PO_B7898E4D,Net 60,EUR,TW_CON_50983F4,East,78,5491
+Digital Williams Solutions,TW_SUP_3404,Utilities & Energy,Renewable Energy Generation,"Health, Safety & Environment",2022-06-24,127319,TW_INV_D49A5D08,TW_PO_D3FE987,Net 90,GBP,TW_CON_F85C87C,South,95,12060
+Hydro Southern-Advisory,TW_SUP_6243,Maintenance & Repair,Equipment Servicing,IT & Digital Transformation,2024-01-28,105044,TW_INV_BA8453D1,TW_PO_49ED260F,Net 30,USD,TW_CON_590256E,North,85,14982
+Hydro Digital-Tech,TW_SUP_4176,Infrastructure & Assets,Pipeline Renewal,IT & Digital Transformation,2022-09-05,718899,TW_INV_73BAAFEE,TW_PO_73413D45,Net 90,USD,TW_CON_3B72213,North,78,22243
+Digital Williams Solutions,TW_SUP_9086,Infrastructure & Assets,Reservoir Construction,Customer Operations & Retail,2023-03-22,425529,TW_INV_6D869A50,TW_PO_3856A451,Net 60,USD,TW_CON_21F65D7,East,47,49076
+Digital Williams Solutions,TW_SUP_6213,Fleet & Logistics,Logistics & Haulage,Network Operations & Maintenance,2021-10-02,77252,TW_INV_E8960C0,TW_PO_E00878DC,Net 45,GBP,TW_CON_8B21860,East,82,9284
+Tech Aqua-Engineering,TW_SUP_2021,Business Services,HR & Payroll Services,Strategic Resource Planning,2022-08-10,90365,TW_INV_5307BB3B,TW_PO_9A6856B8,Net 60,USD,TW_CON_66E51F7,East,65,8654
+Chem Thomas Services,TW_SUP_8842,Fleet & Logistics,Fuel Costs,Capital Delivery Programmes,2022-03-14,131117,TW_INV_5C468D18,TW_PO_F1F6A7C2,Net 45,EUR,TW_CON_CDA59AB,South,93,5540
+Tech Aqua-Engineering,TW_SUP_3420,Professional & Consultancy Services,Engineering Design,Procurement & Supply Chain,2021-08-18,28790,TW_INV_D0250A52,TW_PO_2D217D08,Net 30,GBP,TW_CON_AEC018B,East,91,2228
+UK Jones Systems,TW_SUP_2989,Maintenance & Repair,Scheduled Maintenance Works,Capital Delivery Programmes,2023-11-19,135834,TW_INV_B3F52857,TW_PO_12EFED96,Net 30,GBP,TW_CON_AEC97DD,East,66,3800
+Tech Thames-Technologies,TW_SUP_2395,Infrastructure & Assets,Pipeline Renewal,"Health, Safety & Environment",2022-02-25,254816,TW_INV_2C20BA8D,TW_PO_3EE65A6C,Net 45,GBP,TW_CON_D7148FC,International,13,10752
+Enviro Taylor Utilities,TW_SUP_3825,Technology & IT,Cybersecurity Services,Human Resources,2021-05-27,436292,TW_INV_723CDAFC,TW_PO_59145C8E,Net 90,GBP,TW_CON_27FA036,International,5,4958
+Chem Thomas Group,TW_SUP_9528,Infrastructure & Assets,New Connections,Network Operations & Maintenance,2024-09-13,528850,TW_INV_66755887,TW_PO_1436B630,Net 60,EUR,TW_CON_550893C,North,74,28976
+Hydro Digital-Tech,TW_SUP_3568,Maintenance & Repair,Scheduled Maintenance Works,Human Resources,2024-09-27,16991,TW_INV_82EBD533,TW_PO_80EC163F,Net 30,EUR,TW_CON_8880729,West,51,1867
+Tech Thames-Technologies,TW_SUP_7673,Professional & Consultancy Services,Legal Counsel,Network Operations & Maintenance,2022-12-19,58745,TW_INV_297F3627,TW_PO_6696D1D6,Net 60,USD,TW_CON_AF3746F,International,91,985
+Southern London-Solutions,TW_SUP_4514,Fleet & Logistics,Logistics & Haulage,Capital Delivery Programmes,2023-03-22,74596,TW_INV_BB3D478C,TW_PO_3961A9B2,Net 90,EUR,TW_CON_983613A,East,89,5934
+UK Jones Systems,TW_SUP_4059,Utilities & Energy,Renewable Energy Generation,Finance & Regulation,2023-07-12,147358,TW_INV_9C45F5DB,TW_PO_B1A2C81D,Net 90,USD,TW_CON_C507C42,Central,84,5650
+Digital Jones PLC,TW_SUP_9065,Business Services,HR & Payroll Services,Human Resources,2022-05-22,13836,TW_INV_89BC0F5D,TW_PO_C9713C8A,Net 45,USD,TW_CON_766422D,Central,39,1881
+Severn Jones Group,TW_SUP_5325,Utilities & Energy,Renewable Energy Generation,Network Operations & Maintenance,2024-12-16,119613,TW_INV_CFF021A0,TW_PO_7F3AF5B,Net 60,GBP,TW_CON_562568,East,25,10033
+Cyber Digital-Advisory,TW_SUP_2037,Technology & IT,Cloud Hosting,IT & Digital Transformation,2022-06-20,156034,TW_INV_C0441B29,TW_PO_C9B3CDA3,Net 30,EUR,TW_CON_4B73DA9,Central,16,20580
+Enviro Taylor Utilities,TW_SUP_7155,Operational Consumables,Office Supplies,Finance & Regulation,2024-02-23,29624,TW_INV_F3BD4630,TW_PO_1343EEE9,Net 30,EUR,TW_CON_67B7124,North,45,857
+Digital Williams Group,TW_SUP_6387,Infrastructure & Assets,New Connections,Asset Management Strategy,2021-08-11,581028,TW_INV_68134B36,TW_PO_B50A1AF6,Net 90,EUR,TW_CON_D804128,North,38,18111
+Data UK-Engineering,TW_SUP_9667,Operational Consumables,Office Supplies,Wastewater Collection & Treatment,2022-09-21,82558,TW_INV_9B9887FA,TW_PO_6774108D,Net 90,GBP,TW_CON_59646F8,South,43,10205
+Severn Thomas Engineering,TW_SUP_8488,Business Services,Customer Call Centre Services,Capital Delivery Programmes,2021-11-19,65989,TW_INV_8B1049D3,TW_PO_397FEB53,Net 45,EUR,TW_CON_FB85A8E,East,26,4568
+Southern Cyber-Ltd,TW_SUP_6946,Business Services,Training & Development,Capital Delivery Programmes,2023-11-20,53467,TW_INV_1AC35F72,TW_PO_D99EB6EC,Net 60,EUR,TW_CON_61823FD,South,17,4331
+Hydro Digital-Tech,TW_SUP_2380,Maintenance & Repair,Scheduled Maintenance Works,Capital Delivery Programmes,2021-10-28,87315,TW_INV_CE7C036B,TW_PO_C6859D6C,Net 45,GBP,TW_CON_3C79BB2,International,14,883
+UK Jones Systems,TW_SUP_5884,Infrastructure & Assets,Reservoir Construction,Capital Delivery Programmes,2025-03-19,81576,TW_INV_915BCAB9,TW_PO_BF3ADF7E,Net 30,EUR,TW_CON_608390,International,86,7559
